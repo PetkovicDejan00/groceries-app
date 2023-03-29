@@ -1,0 +1,244 @@
+/* Base CSS */ /* Base CSS */ /* Base CSS */
+
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.App {
+  width: auto;
+}
+
+/* GroceriesApp */ /* GroceriesApp */ /* GroceriesApp */
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;;
+  gap: 10rem;
+  margin-top: 2rem;
+}
+
+/* GroceriesForm */ /* GroceriesForm */ /* GroceriesForm */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  background: rgba(107, 101, 101, 0.107);
+  padding: 2rem 3rem;
+  min-height: 380px;
+}
+
+.form input {
+  padding: 0.5rem 1rem;
+  width: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: none;
+}
+
+.form label {
+  margin-right: auto;
+}
+
+.form button {
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  margin-right: auto;
+  background: rgb(20, 188, 20);
+  color: rgb(40, 37, 37);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s ease;
+  border-radius: 5px;
+}
+.form button:hover {
+  background: rgb(0, 131, 0);
+}
+
+/* GroceriesList */ /* GroceriesList */ /* GroceriesList */
+
+.grocery .grocery-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+.groceryList {
+  background: rgba(107, 101, 101, 0.107);
+  padding: 2rem;
+  min-height: 380px;
+}
+
+.grocery {
+  background: rgb(60, 56, 56);
+  margin-block: 0.5rem;
+  padding: 0.3rem;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.clear-all-button {
+  margin: 0 auto;
+  width: 100%;
+  padding-block: 0.7rem;
+  margin-top: 1rem;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  background: rgba(255, 0, 0, 0.503);
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  transition: 0.3s ease;
+  padding: 0.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: rgba(25, 25, 16, 0.628);
+}
+
+.edit-btn,
+.delete-btn {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-btn:hover {
+  background: rgb(255, 255, 73);
+  color: black;
+}
+.delete-btn:hover {
+  background: rgba(255, 0, 0, 0.503);
+}
+
+.titles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-right: 45px;
+}
+
+.titles p {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* BudgetCalculation */ /* BudgetCalculation */ /* BudgetCalculation */
+
+.budget-calc {
+  text-align: center;
+  width: 100%;
+  padding-block: 1rem 2rem;
+  border-bottom: 1px solid rgb(125, 121, 121);
+}
+
+.budget-calc button {
+  margin-left: 10px;
+  cursor: pointer;
+  padding: 0.4rem;
+  letter-spacing: 1px;
+}
+
+.budget-calc input {
+  padding: 0.4rem;
+}
+
+
+
+@media (max-width: 1144px) {
+  .main {
+    gap: 2.5rem;
+  }
+}
+
+@media(max-width: 860px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .form,
+  .groceryList {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .main {
+    width: 100%;
+  }
+}
+
+@media(max-width: 450px) {
+  .form,
+  .groceryList {
+    padding: 1rem;
+  }
+
+  .grocery {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .titles,
+  .grocery-info {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+  .cta-buttons {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media(max-width: 341px) {
+  .budget-calc button {
+    margin-top: 10px;
+  }
+}
