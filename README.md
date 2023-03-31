@@ -17,4 +17,4 @@ Once the setup is complete, run the project
   npm run dev
 ```
 
-[Website Live Version](groceries-app-react.netlify.app/)
+[Website Live Version](https://groceries-app-react.netlify.app/)
